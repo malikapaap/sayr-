@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>UniPrint — бизнес-план</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ECEBE7;--tx:#14171A;--mut:#666a6f;--line:#cfcdc6;--l2:#a9a7a0;--acc:#D61F5B;--st:#dedcd6;--dk:#14171A;--dt:#ECEBE7;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1114;--tx:#ECEBE7;--mut:#9a9da2;--line:#2a2d31;--l2:#4a4d52;--acc:#FF5A8C;--st:#181b1f;--dk:#181b1f;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0f1114;--tx:#ECEBE7;--mut:#9a9da2;--line:#2a2d31;--l2:#4a4d52;--acc:#FF5A8C;--st:#181b1f;--dk:#181b1f;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4rem);font-size:16px}html.p{font-size:clamp(14px,min(1.3vw,2.3vh),30px)}
+body{margin:0;font:400 1rem/1.62 "Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+#pg0{position:absolute;left:0;bottom:-1px;height:2px;background:var(--acc);width:0}
+.w{max-width:76rem;margin:auto;padding:0 clamp(1.25rem,4vw,3rem)}.hr{display:flex;align-items:center;gap:1.4rem;height:3.5rem}
+.lg{display:flex;align-items:center;gap:.55rem;font-weight:600;text-decoration:none;letter-spacing:-.01em}.lg svg{width:1.6rem;height:1.6rem;color:var(--tx)}
+#cur{flex:1;color:var(--mut);font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl{background:none;border:0;padding:.3rem 0;font-size:.9rem;border-bottom:1px solid transparent}.tl:hover{border-color:var(--tx)}.tl:active{color:var(--acc)}
+#nv{display:none;border-top:1px solid var(--line)}#nv.open{display:block}#nv .w{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:0 2rem;padding-top:1rem;padding-bottom:1.2rem}
+#nv a{padding:.38rem 0;text-decoration:none;color:var(--mut);font-size:.92rem;border-bottom:1px solid var(--line)}#nv a:hover{color:var(--tx)}#nv a.on{color:var(--tx);font-weight:600}#nv a.on::before{content:"";display:inline-block;width:.45rem;height:.45rem;background:var(--acc);margin-right:.5rem}
+section{padding:7rem 0;border-bottom:1px solid var(--line)}.dk{background:var(--dk);color:var(--dt);border-color:transparent}.dk .mut,.dk .sn{color:#9a9da2}
+h1{font-size:clamp(2.8rem,6.6vw,6rem);line-height:.96;margin:0 0 1.6rem;font-weight:500;letter-spacing:-.04em}h2{font-size:clamp(1.8rem,3.3vw,3rem);line-height:1.08;margin:0;font-weight:500;letter-spacing:-.025em;max-width:20ch}h3{font-size:1rem;font-weight:600;margin:0 0 .3rem}
+p{margin:0 0 1rem;max-width:38rem}.mut{color:var(--mut)}.sn{color:var(--mut);font-size:.88rem}
+.sh{display:grid;grid-template-columns:13rem 1fr;gap:2rem;margin-bottom:4rem}.sh+*{margin-top:0}
+.btn{display:inline-block;background:var(--tx);color:var(--bg);border:1px solid var(--tx);padding:.85rem 1.5rem;border-radius:2px;text-decoration:none;font-weight:500;transition:background .2s,border-color .2s,transform .1s}.btn:hover{background:var(--acc);border-color:var(--acc);color:#fff}.btn:active{transform:translateY(1px)}.btn.o{background:transparent;color:inherit;border-color:currentColor}.btn.o:hover{background:var(--tx);border-color:var(--tx);color:var(--bg)}.dk .btn{background:var(--dt);color:#14171A;border-color:var(--dt)}.dk .btn:hover{background:var(--acc);border-color:var(--acc);color:#fff}.dk .btn.o{background:transparent;color:var(--dt)}
+.lk{margin-left:1.4rem;text-underline-offset:.3em}
+/* hero */
+.hero{padding:0;min-height:calc(100vh - 3.5rem);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.hl{padding:clamp(2rem,6vw,5rem) clamp(1.25rem,4vw,4rem);display:flex;flex-direction:column;justify-content:space-between;gap:3rem}.hl .lg{font-size:1.1rem}.hl .lg svg{width:2.4rem;height:2.4rem}.hl .lg small{display:block;font-weight:400;color:var(--mut);font-size:.8rem}
+.hl p{font-size:1.1rem;color:var(--mut)}
+.stage{position:relative;background:var(--st);min-height:34rem;overflow:hidden}#v3{position:absolute;inset:0}#v3 canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.vb{position:absolute;left:0;right:0;bottom:0;display:flex;gap:1.2rem;flex-wrap:wrap;padding:1rem 1.5rem;border-top:1px solid var(--line);background:color-mix(in srgb,var(--st) 82%,transparent);align-items:center}.vb button{background:none;border:0;border-bottom:2px solid transparent;padding:.2rem 0;font-size:.88rem}.vb button:hover{border-color:var(--l2)}.vb button.on{border-color:var(--acc);font-weight:600}.vb .sp{flex:1}.vb .zb{border:1px solid var(--l2);width:1.9rem;height:1.9rem;padding:0;border-radius:2px;line-height:1}
+.cap{position:absolute;left:1.5rem;top:1.2rem;font-size:.78rem;color:var(--mut)}
+.hs{position:absolute;left:0;top:0;pointer-events:none;font-size:.74rem;white-space:nowrap;transition:opacity .25s;padding-left:.95rem;will-change:transform}.hs::before{content:"";position:absolute;left:-.2rem;top:50%;width:.55rem;height:.55rem;margin-top:-.28rem;background:var(--acc);border-radius:50%}.hs span{background:var(--bg);padding:.1rem .45rem;border-radius:2px;border:1px solid var(--line)}
+/* blocks */
+.mt{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--tx)}.mt div{padding:1.2rem 1.2rem 0 0}.mt b{display:block;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:500;letter-spacing:-.03em;line-height:1.1}.mt span{font-size:.84rem;color:var(--mut)}
+.big{font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.25;letter-spacing:-.02em;max-width:34ch;margin:0 0 4rem;font-weight:400}
+.cmp{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--tx)}.cmp>div{padding:.8rem 0;border-bottom:1px solid var(--line)}.cmp>div:nth-child(2n){padding-left:2rem;border-left:1px solid var(--line)}.cmp .h{font-size:.84rem;color:var(--mut);border-bottom-color:var(--tx)}
+.stp{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin-bottom:5rem}.stp::before{content:"";position:absolute;left:0;right:0;top:.55rem;height:1px;background:var(--l2)}.stp div{position:relative;padding:2rem 1.2rem 0 0}.stp i{position:absolute;top:.2rem;left:0;width:.7rem;height:.7rem;background:var(--bg);border:2px solid var(--tx);border-radius:50%}.stp p{font-size:.9rem;color:var(--mut);margin:0}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:4rem;background:var(--dk);color:var(--dt);padding:3rem;margin-bottom:5rem}
+label{display:block;font-size:.8rem;color:var(--mut);margin-bottom:.9rem}.dk label,.demo label{color:#9a9da2}label.ck{display:flex;gap:.6rem;align-items:center;color:inherit;font-size:.92rem}
+input[type=number],input[type=file]{font:inherit;color:inherit;background:transparent;border:0;border-bottom:1px solid var(--l2);padding:.35rem 0;width:100%;border-radius:0;display:block}input[type=number]:focus{outline:0;border-color:var(--acc)}input[type=checkbox]{accent-color:var(--acc);width:1rem;height:1rem}
+.sg{display:flex;gap:0;margin:0 0 1.2rem;border:1px solid var(--l2);width:max-content;max-width:100%;border-radius:2px;overflow:hidden}.sg button{background:none;border:0;padding:.5rem 1rem;font-size:.88rem;border-right:1px solid var(--l2)}.sg button:last-child{border:0}.sg button:hover{background:var(--line)}.sg button.on{background:var(--tx);color:var(--bg)}.demo .sg button.on{background:var(--dt);color:#14171A}.demo .sg button:hover:not(.on){background:#2a2d31}
+.ds{background:#07080a;border:1px solid #2a2d31;padding:1.6rem;min-height:15rem;display:flex;flex-direction:column;gap:.5rem;border-radius:2px}.ds b{font-size:1.5rem;font-weight:500}.ds span{color:#9a9da2;font-size:.9rem}.pbar{height:3px;background:#2a2d31;margin-top:auto}.pbar i{display:block;height:100%;width:0;background:var(--acc)}.tray{height:3.2rem;border-top:1px solid #2a2d31;position:relative}.tray i{position:absolute;left:25%;right:25%;top:0;height:0;background:#ECEBE7}
+.tt{margin:1rem 0;font-size:1.05rem}table{width:100%;border-collapse:collapse;font-size:.92rem}th{font-weight:500;color:var(--mut);font-size:.8rem;text-align:left;padding:.6rem .8rem .6rem 0;border-bottom:1px solid var(--tx);white-space:nowrap}td{padding:.7rem .8rem .7rem 0;border-bottom:1px solid var(--line);vertical-align:top}.r{text-align:right}th.r{padding-right:0}td.r{padding-right:0;white-space:nowrap}.tw{overflow-x:auto}td input{width:5.5rem;display:inline-block;text-align:right;padding:.1rem 0}
+.neg{color:var(--acc)}.col3{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem}.col3>div{border-top:1px solid var(--tx);padding-top:.8rem}.col4{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}.col4>div{border-left:1px solid var(--line);padding-left:1rem}.col4>div:first-child{border:0;padding:0}
+.tape{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--tx);margin-bottom:2.5rem}.tape div{padding:1.4rem 1rem 1.4rem 0}.tape b{display:block;font-size:clamp(3rem,7vw,6.5rem);font-weight:500;letter-spacing:-.05em;line-height:1}.tape b small{font-size:.22em;letter-spacing:0;margin-left:.3rem;font-weight:400}.tape span{color:var(--mut);font-size:.9rem}
+.dl{display:grid;grid-template-columns:1fr auto;border-top:1px solid var(--tx)}.dl>*{padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}.dl dt{color:var(--mut);font-size:.9rem}.dl dd{text-align:right;font-weight:500}
+.ibar{display:flex;height:.9rem;margin:2rem 0 .8rem}.ibar i{display:block;height:100%;border-right:2px solid var(--bg)}.ilg{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;font-size:.84rem;color:var(--mut)}.ilg b{color:var(--tx);font-weight:500}.ilg em{display:inline-block;width:.6rem;height:.6rem;margin-right:.4rem}
+.x0{background:var(--tx)}.x1{background:var(--mut)}.x2{background:var(--acc)}.x3{background:var(--l2)}.x4{background:var(--line)}.x5{background:var(--st)}
+.fin{display:grid;grid-template-columns:minmax(0,19rem) 1fr;gap:4rem;margin-bottom:3rem}.pg2{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}.fin label{margin-bottom:.7rem;font-size:.76rem}.fin label i{font-style:normal;opacity:.7}.fin .ck{grid-column:1/-1;margin-top:.5rem}
+.ch{height:22rem;position:relative}.ch2{display:grid;grid-template-columns:3fr 2fr;gap:4rem;margin:3rem 0}.pbn{font-size:clamp(2.4rem,5vw,4.4rem);letter-spacing:-.04em;font-weight:500;line-height:1}
+.gt{display:grid;grid-template-columns:13rem 1fr;border-top:1px solid var(--tx)}.gt>div{border-bottom:1px solid var(--line);padding:.7rem 0;min-height:2.8rem}.gt .tr{position:relative}.gt .tr i{position:absolute;top:50%;height:.7rem;margin-top:-.35rem;background:var(--tx)}.gt .tr i.a{background:var(--acc)}.gt .tk{font-size:.78rem;color:var(--mut);display:flex;justify-content:space-between;padding-right:0}
+.sq{display:inline-block;width:.7rem;height:.7rem;border:1px solid var(--tx);margin-right:3px}.sq.on{background:var(--tx)}
+.rm{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:4rem}.rm div{border-top:2px solid var(--dt);padding-top:.8rem}.rm b{display:block;font-weight:500}.rm span{color:#9a9da2;font-size:.9rem}
+#hud{display:none;position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:40;background:#14171A;color:#ECEBE7;border:1px solid #3a3d42;border-radius:2px;align-items:center}#hud button{background:none;border:0;width:2.4rem;height:2.4rem;font-size:1.2rem;color:#ECEBE7}#hud button:hover{background:var(--acc)}#hud span{font-size:.82rem;padding:0 .6rem}
+body.pres header{display:none}body.pres #hud{display:flex}body.pres section{display:none;min-height:100vh;padding:4rem 0;align-content:center;overflow:auto}body.pres section.on{display:block;animation:in .4s}body.pres .hero.on{display:grid}@keyframes in{from{opacity:0}}
+@media(max-width:860px){section{padding:4.5rem 0}.hero{grid-template-columns:1fr;min-height:0}.stage{min-height:30rem}.sh,.demo,.fin,.ch2,.cmp{grid-template-columns:1fr}.sh{gap:.8rem;margin-bottom:2.5rem}.demo{padding:1.5rem;gap:2rem}.stp,.col3,.col4,.rm{grid-template-columns:1fr 1fr;gap:1.5rem}.stp::before{display:none}.mt,.tape{grid-template-columns:1fr 1fr}.col4>div{border:0;padding:0}.cmp>div:nth-child(2n){padding-left:1rem}.gt{grid-template-columns:7rem 1fr}#cur{display:none}.hr{gap:1rem}.hr .lg{flex:1}.pd{display:none}.cap{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{header,#hud,body::before,.vb,.hs{display:none!important}:root{--bg:#fff!important;--tx:#14171A!important;--mut:#555!important;--line:#ccc!important;--st:#eee!important}section{display:block!important;break-inside:avoid-page;padding:2rem 0!important}.hero{display:grid!important;min-height:0}.dk,.demo,.ibar i,.pbar i{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><symbol id="lg" viewBox="0 0 34 34"><path d="M12.5 4h8l4 4v12h-12z" fill="#D61F5B"/><path d="M7 7v14a10 10 0 0 0 20 0V7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+<header><div class="w hr"><a class="lg" href="#s1"><svg><use href="#lg"/></svg>UniPrint</a><span id="cur"></span><button class="tl" id="mn">Содержание</button><button class="tl pd" id="pd">PDF</button><button class="tl" id="pr">Презентация</button></div><nav id="nv"><div class="w"></div></nav><i id="pg0"></i></header>
+<div id="hud"><button id="pv" aria-label="Назад">‹</button><span id="ht"></span><button id="nx" aria-label="Вперёд">›</button><button id="ex" aria-label="Выйти из презентации">×</button></div>
+<main>
+<section id="s1" data-t="Главная" class="hero"><div class="hl"><div class="lg"><svg><use href="#lg"/></svg><div>UniPrint<small>Твоя печать. Твоё время.</small></div></div>
+<div><h1>Печать без очередей</h1><p>UniPrint — сервис автоматизированной печати документов для студентов и преподавателей. Файл загружается по QR-коду, цена видна до оплаты, распечатка ждёт в лотке автомата.</p><a class="btn" href="#s2">Исследовать проект</a><a class="lk" href="#s4">Как это работает</a></div><span class="sn">Бишкек, Кыргызстан</span></div>
+<div class="stage"><div id="v3"></div><span class="cap">Концептуальная 3D-модель проектируемого устройства</span><div class="vb" id="vb"><button data-v="front">Спереди</button><button data-v="iso" class="on">3D-обзор</button><button data-v="side">Сбоку</button><button data-v="screen">Экран</button><button data-v="out">Выдача</button><span class="sp"></span><button class="zb" id="zi" aria-label="Приблизить">+</button><button class="zb" id="zo" aria-label="Отдалить">−</button><button data-v="reset">Сбросить</button></div></div></section>
+
+<section id="s2" data-t="Резюме"><div class="w"><div class="sh"><span class="sn">02 Резюме</span></div>
+<p class="big">UniPrint — сервис автоматизированной печати документов для студентов и преподавателей. Наша задача — сделать печать простой и доступной в любой точке кампуса.</p>
+<div class="mt" id="hk"></div>
+<div class="col3" style="margin-top:4rem"><div><h3>Первый этап</h3><p class="mut">Пилотная точка с одним автоматом рядом с университетом в Бишкеке.</p></div><div><h3>Доход</h3><p class="mut">Печать, сканирование и переплёт; партнёрские услуги как дополнительный источник.</p></div><div><h3>Устройство</h3><p class="mut">Напольный автомат с сенсорным экраном, QR-загрузкой файла и лотком выдачи.</p></div></div></div></section>
+
+<section id="s3" data-t="Проблема и решение"><div class="w"><div class="sh"><span class="sn">03 Проблема и решение</span><h2>Печать в последний момент отнимает время, которого и так нет</h2></div>
+<p class="big" style="font-size:1.3rem;margin-bottom:3rem">Студенты печатают рефераты, лабораторные и курсовые перед сдачей. В эти часы копицентры загружены, вечером и в выходные многие закрыты, а файлы приходится передавать на флешках и в мессенджерах.</p>
+<div class="cmp"><div class="h">Сегодня</div><div class="h">С UniPrint</div><div>Поиск работающей точки</div><div>Автомат в корпусе или общежитии</div><div>Очередь в часы пик</div><div>Загрузка PDF по QR-коду с телефона</div><div>Передача файла чужому компьютеру</div><div>Параметры и цена видны до оплаты</div><div>Оплата на кассе</div><div>Оплата в автомате</div><div>Ожидание распечатки</div><div>Печать и выдача в лоток; файл удаляется с устройства</div></div></div></section>
+
+<section id="s4" data-t="Продукт"><div class="w"><div class="sh"><span class="sn">04 Продукт</span><h2>Автомат, который заменяет очередь и флешку</h2></div>
+<div class="stp"><div><i></i><h3>Загрузка</h3><p>PDF отправляется по QR-коду</p></div><div><i></i><h3>Параметры</h3><p>Цвет, страницы, двусторонняя печать</p></div><div><i></i><h3>Оплата</h3><p>Стоимость показана заранее</p></div><div><i></i><h3>Печать</h3><p>Лазерный МФУ-модуль</p></div><div><i></i><h3>Выдача</h3><p>Документ в подсвеченном лотке</p></div></div>
+<div class="demo"><div><h3 style="margin-bottom:1.2rem">Демонстрация заказа</h3>
+<label>Файл<input type="file" id="fl" accept=".pdf"></label><div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem"><label>Страниц<input type="number" id="pg" value="20" min="1" max="500"></label><label>Копий<input type="number" id="cp" value="1" min="1" max="20"></label></div>
+<div class="sg" id="cl"><button class="on" data-v="bw">Ч/Б</button><button data-v="cl">Цвет</button></div><label class="ck"><input type="checkbox" id="dp"> Двусторонняя печать</label><div class="tt" id="tt"></div>
+<button class="btn" id="pay">Оплатить</button> <button class="btn o" id="rs">Сбросить</button><p class="mut" style="font-size:.8rem;margin:1.2rem 0 0">Прототип интерфейса: оплата и печать имитируются, файл не передаётся.</p></div>
+<div class="ds"><b id="t1"></b><span id="t2"></span><div class="pbar"><i id="pb"></i></div><div class="tray"><i id="pp"></i></div></div></div>
+<table><tr><th>Узел</th><th>Решение в концепте</th></tr><tr><td>Корпус</td><td>Напольный, 600 × 480 × 1700 мм, матовый графит и алюминиевые панели</td></tr><tr><td>Экран</td><td>Сенсорный, в верхней секции с наклоном к пользователю</td></tr><tr><td>Загрузка</td><td>Окно QR-сканера на уровне руки</td></tr><tr><td>Печать</td><td>Лазерный МФУ-модуль и мини-ПК внутри корпуса</td></tr><tr><td>Выдача</td><td>Лоток с подсветкой на удобной высоте</td></tr><tr><td>Обслуживание</td><td>Боковая сервисная панель, вентиляционные прорези</td></tr></table></div></section>
+
+<section id="s5" data-t="Рынок"><div class="w"><div class="sh"><span class="sn">05 Рынок и аудитория</span><h2>Студенты Бишкека — основной сегмент</h2></div>
+<div class="col3"><div><h3>Студенты</h3><p class="mut">Рефераты, курсовые, лабораторные. Частая печать небольшими объёмами.</p></div><div><h3>Преподаватели</h3><p class="mut">Методички, тесты, раздаточные материалы.</p></div><div><h3>Учебные заведения</h3><p class="mut">Партнёры по размещению: кафедры, библиотеки, общежития.</p></div></div>
+<div class="col4" style="margin:4rem 0"><div><h3>Места установки</h3><p class="mut">Корпуса вузов, общежития, библиотеки, колледжи</p></div><div><h3>Опрос</h3><p class="mut">Объём и стоимость печати среди студентов</p></div><div><h3>Замеры</h3><p class="mut">Очереди в копицентрах у вузов</p></div><div><h3>Пилот</h3><p class="mut">Один автомат на семестр</p></div></div>
+<h3>Ёмкость рынка</h3><div class="pg2" style="grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:.8rem 0 1.5rem"><label>Студентов в Бишкеке<input type="number" id="ts" value="100000"></label><label>Страниц на студента в месяц<input type="number" id="tp" value="40"></label><label>Доля, доступная через кампусы, %<input type="number" id="tc" value="10"></label><label>Автоматов<input type="number" id="tn" value="1"></label></div>
+<div class="mt" style="grid-template-columns:repeat(3,1fr)" id="tm"></div><p class="mut" style="font-size:.84rem;margin-top:1rem;max-width:none">TAM = студенты × страницы × цена × 12. SAM = TAM × доля. SOM = автоматы × выручка автомата × 12. Цена и выручка — из финансовой модели.</p></div></section>
+
+<section id="s6" data-t="Конкуренты"><div class="w"><div class="sh"><span class="sn">06 Конкуренты</span><h2>Альтернативы сегодня — копицентр, дом и вуз</h2></div>
+<div class="tw"><table><tr><th></th><th>Копицентры</th><th>Домашний принтер</th><th>Печать в вузе</th><th>UniPrint</th></tr><tr><td>Очередь</td><td>В часы пик</td><td>Нет</td><td>Зависит от кафедры</td><td>Нет</td></tr><tr><td>Режим работы</td><td>По графику точки</td><td>Всегда</td><td>В часы работы вуза</td><td>Весь день в зоне доступа</td></tr><tr><td>Передача файла</td><td>Флешка, мессенджер</td><td>Не требуется</td><td>Флешка</td><td>QR-код</td></tr><tr><td>Оплата</td><td>На месте</td><td>Расходники покупает пользователь</td><td>По правилам вуза</td><td>В автомате</td></tr><tr><td>Стоимость страницы</td><td>По прайсу точки</td><td>Бумага и тонер</td><td>По правилам вуза</td><td>3 сом ч/б, 10 сом цвет</td></tr></table></div>
+<div class="col4" style="margin-top:3.5rem"><div><h3>Скорость</h3><p class="mut">Печать начинается сразу после оплаты.</p></div><div><h3>Прозрачность</h3><p class="mut">Стоимость известна до оплаты.</p></div><div><h3>Приватность</h3><p class="mut">Файл удаляется после печати.</p></div><div><h3>Расположение</h3><p class="mut">Автомат там, где учатся и живут.</p></div></div></div></section>
+
+<section id="s7" data-t="Бизнес-модель" class="dk"><div class="w"><div class="sh"><span class="sn">07 Бизнес-модель</span><h2>Доход формируется за счёт печати и сопутствующих услуг</h2></div>
+<div class="tape" id="pc"></div><p class="mut" style="max-width:44rem">Основной источник — постраничная печать. Сканирование и переплёт добавляют выручку без роста затрат на бумагу. Партнёрские услуги — реклама на экране и продажа канцелярии — рассматриваются как дополнительный доход.</p>
+<p>Вклад одной страницы по средней цене после затрат, комиссии и налога: <b id="ue"></b></p></div></section>
+
+<section id="s8" data-t="Маркетинг"><div class="w"><div class="sh"><span class="sn">08 Маркетинг</span><h2>Продвижение строится там, где студенты уже находятся</h2></div>
+<div class="col4"><div><h3>На месте</h3><p class="mut">QR-наклейки на автомате и у корпусов, объявления в общежитиях.</p></div><div><h3>В сообществах</h3><p class="mut">Telegram- и Instagram-каналы вузов, студенческие советы.</p></div><div><h3>Амбассадоры</h3><p class="mut">Студенты факультетов получают бонусные страницы за приглашения.</p></div><div><h3>Акции</h3><p class="mut">Скидка на первый заказ и в период сессии.</p></div></div>
+<div class="dl" style="margin-top:4rem;grid-template-columns:1fr 1fr 1fr 1fr"><dt style="border-color:var(--tx)">Охват</dt><dt style="border-color:var(--tx)">Первый заказ</dt><dt style="border-color:var(--tx)">Повторный заказ</dt><dt style="border-color:var(--tx)">Показатели</dt><dd style="text-align:left;font-weight:400">Студенты в зоне автомата</dd><dd style="text-align:left;font-weight:400">Заказ через QR</dd><dd style="text-align:left;font-weight:400">Возврат в течение месяца</dd><dd style="text-align:left;font-weight:400">Заказы в день, средний чек, доля повторных</dd></div></div></section>
+
+<section id="s9" data-t="Инвестиции"><div class="w"><div class="sh"><span class="sn">09 Инвестиции</span><h2>Смета пилотной точки</h2></div>
+<div class="tw"><table id="it"></table></div><div class="ibar" id="ib"></div><div class="ilg" id="gs"></div></div></section>
+
+<section id="s10" data-t="Финансовая модель"><div class="w"><div class="sh"><span class="sn">10 Финансовая модель</span><h2>Выручка, расходы и окупаемость одного автомата</h2></div>
+<div class="fin"><div><div class="sg" id="scs"><button data-sc="p">Пессимистичный</button><button data-sc="b" class="on">Базовый</button><button data-sc="o">Оптимистичный</button></div><div class="pg2" id="ins"></div><label class="ck" style="margin-top:.6rem"><input type="checkbox" id="ss" checked> Сезонность (лето ×0,3–0,6, сессия ×1,2)</label></div>
+<div><dl class="dl" id="kp"></dl><div style="margin-top:2rem"><span class="sn">Срок окупаемости</span><div class="pbn" id="pbn"></div><div class="mut" id="pbs" style="font-size:.88rem"></div></div></div></div>
+<h3>Выручка, расходы и прибыль по месяцам</h3><div class="ch"><canvas id="c1"></canvas></div>
+<div class="ch2"><div><h3>Накопленный денежный поток, 24 месяца</h3><div class="ch"><canvas id="c2"></canvas></div></div><div><h3>Структура расходов в месяц</h3><div class="ibar" id="xb" style="margin-top:1rem"></div><div class="ilg" id="xl" style="flex-direction:column"></div><p class="mut" style="font-size:.84rem;margin-top:2rem">Прибыль = выручка − (материалы + комиссия + налог) − постоянные расходы. Комиссия и налог — доля от выручки. Денежный поток — операционная прибыль без амортизации, кредитов и НДС. Срок окупаемости — месяц, в котором накопленный поток (инвестиции со знаком минус плюс прибыль) становится неотрицательным. М1 — сентябрь.</p></div></div>
+<div class="tw"><table id="tb"></table></div></div></section>
+
+<section id="s11" data-t="Операционный план"><div class="w"><div class="sh"><span class="sn">11 Операционный план и этапы запуска</span><h2>От проверки спроса до оценки пилота — 29 недель</h2></div>
+<div class="gt" id="gt"></div>
+<div class="col3" style="margin-top:4rem"><div><h3>Обслуживание</h3><p class="mut">Пополнение бумаги и тонера по графику, осмотр через сервисную панель.</p></div><div><h3>Мониторинг</h3><p class="mut">Удалённый контроль состояния принтера, остатка бумаги и платежей.</p></div><div><h3>Отчётность</h3><p class="mut">Ежемесячный учёт выручки, расходов и объёма печати.</p></div></div></div></section>
+
+<section id="s12" data-t="Риски"><div class="w"><div class="sh"><span class="sn">12 Риски</span><h2>Шесть рисков и меры по их снижению</h2></div>
+<div class="tw"><table id="rk"></table></div></div></section>
+
+<section id="s13" data-t="Перспективы и заключение" class="dk"><div class="w"><div class="sh"><span class="sn">13 Перспективы и заключение</span><h2>От одной точки к сети автоматов в кампусах</h2></div>
+<p class="big" style="margin-bottom:0">Финансовая модель проекта показывает: при текущих параметрах автомат приносит <span id="c1t"></span> операционной прибыли в месяц, срок окупаемости — <span id="c2t"></span>.</p>
+<div class="rm"><div><b>Пилот</b><span>Один автомат, один семестр</span></div><div><b>3–5 автоматов</b><span>Несколько вузов Бишкека</span></div><div><b>Сеть кампусов</b><span>Сканирование, переплёт, партнёры</span></div><div><b>Другие города</b><span>Договоры с вузами и библиотеками</span></div></div></div></section>
+
+<section id="s14" data-t="Источники и допущения"><div class="w"><div class="sh"><span class="sn">14 Источники и допущения</span><h2>На чём основаны расчёты</h2></div>
+<div class="col3"><div><h3>Допущения модели</h3><p class="mut">Бюджет 130 000 сом, цены оборудования и услуг, объём печати, затраты на страницу, комиссия 2 % и налог 3 % от выручки, сезонность, сроки этапов.</p></div><div><h3>Источники</h3><p class="mut">Численность студентов — <a href="https://stat.kg" target="_blank" rel="noopener">Нацстатком КР</a> и данные вузов. Конкурентная среда и локации — <a href="https://2gis.kg" target="_blank" rel="noopener">2ГИС</a> и полевые замеры.</p></div><div><h3>Прототип</h3><p class="mut">Демонстрация заказа имитирует интерфейс без реальной оплаты и печати. 3D-модель — концепт устройства. Презентация: стрелки ← →, Esc — выход.</p></div></div></div></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],f=n=>Math.round(n).toLocaleString('ru-RU')+' сом',R=n=>Math.round(n*100)/100,B=document.body,H=document.documentElement;
+const SC=$$('main section');let pi=0;SC.forEach((s,i)=>s.dataset.i=i);
+$('#nv .w').innerHTML=SC.map((s,i)=>`<a href="#${s.id}" data-i="${i}">${i+1}. ${s.dataset.t}</a>`).join('');
+function act(i){pi=i;$('#cur').textContent=SC[i].dataset.t;$$('#nv a').forEach((a,j)=>a.classList.toggle('on',j==i))}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!B.classList.contains('pres'))act(+e.target.dataset.i)}),{rootMargin:'-40% 0px -55% 0px'});SC.forEach(s=>io.observe(s));act(0);
+addEventListener('scroll',()=>{$('#pg0').style.width=scrollY/Math.max(1,H.scrollHeight-innerHeight)*100+'%'},{passive:true});
+function show(i){i=Math.max(0,Math.min(SC.length-1,i));SC.forEach((s,j)=>s.classList.toggle('on',j==i));act(i);scrollTo(0,0);$('#ht').textContent=`${i+1} / ${SC.length}`;dispatchEvent(new Event('resize'))}
+function pres(on){H.classList.toggle('p',on);B.classList.toggle('pres',on);$('#nv').classList.remove('open');$('#pr').textContent=on?'Выйти':'Презентация';try{if(on)H.requestFullscreen&&H.requestFullscreen();else if(document.fullscreenElement)document.exitFullscreen()}catch(e){}if(on)show(pi);else{SC.forEach(s=>s.classList.remove('on'));dispatchEvent(new Event('resize'));SC[pi].scrollIntoView()}}
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&B.classList.contains('pres'))pres(false)});
+$('#mn').onclick=()=>$('#nv').classList.toggle('open');
+$('#nv').onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();$('#nv').classList.remove('open');SC[+a.dataset.i].scrollIntoView({behavior:'smooth'})};
+$$('a[href^="#s"]').forEach(a=>{if(!a.closest('#nv'))a.onclick=e=>{if(B.classList.contains('pres')){e.preventDefault();show(+document.querySelector(a.getAttribute('href')).dataset.i)}}});
+$('#pr').onclick=()=>pres(!B.classList.contains('pres'));$('#ex').onclick=()=>pres(false);$('#pv').onclick=()=>show(pi-1);$('#nx').onclick=()=>show(pi+1);$('#pd').onclick=()=>window.print();
+document.onkeydown=e=>{if(!B.classList.contains('pres')||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;const k=e.key;if(k=='ArrowRight'||k=='PageDown')show(pi+1);else if(k=='ArrowLeft'||k=='PageUp')show(pi-1);else if(k=='Home')show(0);else if(k=='End')show(SC.length-1);else if(k=='Escape')pres(false)};
+/* ---------- 3D ---------- */
+(()=>{const el=$('#v3');if(!window.THREE){el.innerHTML='<p style="padding:2rem">3D-модель недоступна: не загрузилась библиотека Three.js.</p>';return}
+const T=THREE,cl=(v,a,b)=>Math.max(a,Math.min(b,v)),rd=new T.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});
+rd.setPixelRatio(Math.min(devicePixelRatio,2));rd.shadowMap.enabled=true;rd.shadowMap.type=T.PCFSoftShadowMap;rd.outputEncoding=T.sRGBEncoding;el.prepend(rd.domElement);
+const sc=new T.Scene(),cam=new T.PerspectiveCamera(30,1,.1,50),dev=new T.Group();sc.add(dev);
+const M=(c,r=.8,m=.1)=>new T.MeshStandardMaterial({color:c,roughness:r,metalness:m});
+function rb(w,h,d,r,mat,b=.006){const a=w/2-b,c=h/2-b,s=new T.Shape();r=Math.min(r,a,c);s.moveTo(-a+r,-c);s.lineTo(a-r,-c);s.quadraticCurveTo(a,-c,a,-c+r);s.lineTo(a,c-r);s.quadraticCurveTo(a,c,a-r,c);s.lineTo(-a+r,c);s.quadraticCurveTo(-a,c,-a,c-r);s.lineTo(-a,-c+r);s.quadraticCurveTo(-a,-c,-a+r,-c);
+const g=new T.ExtrudeGeometry(s,{depth:d-2*b,bevelEnabled:true,bevelThickness:b,bevelSize:b,bevelSegments:2,curveSegments:5});g.translate(0,0,-(d/2-b));const m=new T.Mesh(g,mat);m.castShadow=m.receiveShadow=true;return m}
+function put(m,x,y,z,p=dev){m.position.set(x,y,z);p.add(m);return m}
+const bx=(w,h,d,mat,x,y,z,p)=>{const m=new T.Mesh(new T.BoxGeometry(w,h,d),mat);m.castShadow=true;return put(m,x,y,z,p)};
+function ct(w,h,fn){const c=document.createElement('canvas');c.width=w;c.height=h;fn(c.getContext('2d'),w,h);const t=new T.CanvasTexture(c);t.encoding=T.sRGBEncoding;t.anisotropy=8;return t}
+const mark=(x,ox,oy,s,col)=>{x.save();x.translate(ox,oy);x.scale(s,s);x.fillStyle='#FF5A8C';x.fillRect(12.5,4,12,16);x.strokeStyle=col;x.lineWidth=3.2;x.lineCap='round';x.beginPath();x.moveTo(7,7);x.lineTo(7,21);x.arc(17,21,10,Math.PI,0,true);x.lineTo(27,7);x.stroke();x.restore()};
+const gr=M(0x2c2f34,.88,.12),al=M(0xc6c9cc,.42,.75),bk=M(0x0b0c0e,.5,.3),dk=M(0x15171a,.9,.1);
+put(rb(.54,.07,.44,.01,dk),0,.035,0);
+put(rb(.6,1.58,.48,.035,gr),0,.86,0);
+put(rb(.62,.035,.5,.012,al),0,1.667,0);
+// logo
+put(new T.Mesh(new T.PlaneGeometry(.3,.075),new T.MeshBasicMaterial({map:ct(512,128,(x,w,h)=>{mark(x,10,26,2.6,'#ECEBE7');x.fillStyle='#ECEBE7';x.font='600 66px system-ui,sans-serif';x.fillText('UniPrint',112,84)}),transparent:true})),0,1.6,.2415);
+// head
+const hd=new T.Group();hd.position.set(0,1.4,.255);hd.rotation.x=-.14;dev.add(hd);
+hd.add(rb(.46,.32,.05,.025,M(0x0d0e10,.4,.3)));
+put(new T.Mesh(new T.PlaneGeometry(.4,.26),new T.MeshBasicMaterial({map:ct(512,333,(x,w,h)=>{x.fillStyle='#101215';x.fillRect(0,0,w,h);mark(x,26,22,1.3,'#fff');x.fillStyle='#fff';x.font='600 30px system-ui,sans-serif';x.fillText('UniPrint',74,60);x.font='500 40px system-ui,sans-serif';x.fillText('Загрузите документ',40,168);x.fillStyle='#9a9da2';x.font='400 24px system-ui,sans-serif';x.fillText('Отсканируйте QR-код телефоном',40,206);x.fillStyle='#D61F5B';x.fillRect(40,236,170,52);x.fillStyle='#fff';x.font='600 24px system-ui,sans-serif';x.fillText('Начать',80,271);x.fillStyle='#9a9da2';x.font='400 20px system-ui,sans-serif';x.fillText('Ч/Б 3 сом · Цвет 10 сом',262,271)})})),0,0,.0265,hd);
+// seams
+[1.06,.47].forEach(y=>bx(.6,.004,.002,dk,0,y,.241));
+// QR
+put(rb(.19,.19,.014,.015,al),-.12,1.12,.246);put(rb(.16,.16,.01,.012,M(0x08090b,.12,.6)),-.12,1.12,.254);
+put(new T.Mesh(new T.PlaneGeometry(.15,.15),new T.MeshBasicMaterial({map:ct(256,256,(x,w,h)=>{x.strokeStyle='#FF5A8C';x.lineWidth=9;[[30,30,1,1],[226,30,-1,1],[30,226,1,-1],[226,226,-1,-1]].forEach(([a,b,u,v])=>{x.beginPath();x.moveTo(a,b+50*v);x.lineTo(a,b);x.lineTo(a+50*u,b);x.stroke()});x.fillStyle='#ECEBE7';x.font='500 30px system-ui,sans-serif';x.textAlign='center';x.fillText('QR',128,140)}),transparent:true})),-.12,1.12,.2605);
+bx(.14,.05,.006,al,.13,1.07,.244);const led=new T.Mesh(new T.SphereGeometry(.007,12,12),new T.MeshBasicMaterial({color:0xFF5A8C}));put(led,.18,1.17,.246);
+// output
+put(rb(.42,.22,.016,.012,al),0,.62,.247);put(rb(.36,.13,.02,.01,bk),0,.62,.257);
+bx(.36,.004,.003,new T.MeshBasicMaterial({color:0xFF5A8C}),0,.715,.256);
+const lip=bx(.34,.012,.1,al,0,.545,.285);lip.rotation.x=.22;
+[.585,.5865,.588].forEach((y,i)=>{const p=bx(.21,.0016,.15,M(0xf6f5f0,.9,0),0,y,.275+i*.003);p.rotation.set(.16,.025*(i-1),0)});
+// vents
+for(let i=0;i<14;i++)bx(.008,.1,.004,bk,-.169+i*.026,.22,.241);
+for(let i=0;i<8;i++)bx(.004,.008,.2,bk,-.3,.42+i*.03,0);
+// service panel
+bx(.01,.74,.34,dk,.3,.9,0);const sp=rb(.32,.72,.014,.012,al);sp.rotation.y=Math.PI/2;put(sp,.306,.9,0);
+[[.13,.33],[-.13,.33],[.13,-.33],[-.13,-.33]].forEach(([z,y])=>{const s=new T.Mesh(new T.CylinderGeometry(.008,.008,.006,12),bk);s.rotation.z=Math.PI/2;put(s,.314,.9+y,z)});
+const lk=new T.Mesh(new T.CylinderGeometry(.02,.02,.012,20),bk);lk.rotation.z=Math.PI/2;put(lk,.315,.9,.09);
+const gnd=new T.Mesh(new T.PlaneGeometry(12,12),new T.ShadowMaterial({opacity:.24}));gnd.rotation.x=-Math.PI/2;gnd.receiveShadow=true;sc.add(gnd);
+sc.add(new T.HemisphereLight(0xffffff,0x8a8f96,.8));
+const k=new T.DirectionalLight(0xffffff,.95);k.position.set(1.4,3.2,2.6);k.castShadow=true;k.shadow.mapSize.set(1024,1024);Object.assign(k.shadow.camera,{left:-1.6,right:1.6,top:2.4,bottom:-1,near:.5,far:9});k.shadow.bias=-.0005;sc.add(k);
+const fl=new T.DirectionalLight(0xffffff,.35);fl.position.set(-2,1.2,1.6);sc.add(fl);const rim=new T.DirectionalLight(0xffffff,.35);rim.position.set(-1,2,-3);sc.add(rim);
+/* camera */
+const S={t:.75,p:1.33,r:4.8,x:0,y:.86,z:0},VW={front:{t:0,p:1.5,r:4.5,x:0,y:.86,z:0},iso:{t:.75,p:1.33,r:4.8,x:0,y:.86,z:0},side:{t:Math.PI/2,p:1.5,r:4.5,x:0,y:.86,z:0},screen:{t:.16,p:1.43,r:1.3,x:0,y:1.36,z:.25},out:{t:-.22,p:1.47,r:1.15,x:0,y:.62,z:.27}};
+let G=null,idle=true,vis=true;const pts=new Map(),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let pd=1;
+const setOn=v=>$$('#vb [data-v]').forEach(b=>b.classList.toggle('on',b.dataset.v==v));
+function go(v){S.t=((S.t+Math.PI)%(2*Math.PI)+2*Math.PI)%(2*Math.PI)-Math.PI;idle=v=='reset';G=VW[v=='reset'?'iso':v];setOn(v=='reset'?'iso':v)}
+$('#vb').onclick=e=>{const b=e.target.closest('[data-v]');if(b)go(b.dataset.v)};
+$('#zi').onclick=()=>{G=null;idle=false;setOn('');S.r=cl(S.r*.8,.7,8)};$('#zo').onclick=()=>{G=null;idle=false;setOn('');S.r=cl(S.r*1.25,.7,8)};
+const c=rd.domElement,pdist=()=>{const a=[...pts.values()];return Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1])||1};
+c.onpointerdown=e=>{c.setPointerCapture(e.pointerId);pts.set(e.pointerId,[e.clientX,e.clientY]);G=null;idle=false;setOn('');if(pts.size==2)pd=pdist()};
+c.onpointermove=e=>{const p=pts.get(e.pointerId);if(!p)return;const dx=e.clientX-p[0],dy=e.clientY-p[1];pts.set(e.pointerId,[e.clientX,e.clientY]);if(pts.size==1){S.t-=dx*.008;S.p=cl(S.p-dy*.006,.5,1.7)}else if(pts.size==2){const d=pdist();S.r=cl(S.r*pd/d,.7,8);pd=d}};
+c.onpointerup=c.onpointercancel=e=>pts.delete(e.pointerId);c.onwheel=e=>{e.preventDefault();G=null;idle=false;setOn('');S.r=cl(S.r*(1+e.deltaY*.001),.7,8)};
+/* hotspots */
+const HS=[['Сенсорный экран',[0,1.42,.29],[0,0,1]],['QR-сканер',[-.12,1.12,.27],[0,0,1]],['Зона выдачи',[.14,.6,.3],[0,0,1]],['Вентиляция',[.13,.22,.245],[0,0,1]],['Сервисная панель',[.32,.9,-.05],[1,0,0]]].map(h=>{const e=document.createElement('div');e.className='hs';e.innerHTML='<span>'+h[0]+'</span>';el.appendChild(e);return{e,p:new T.Vector3(...h[1]),n:h[2]}});
+const W=()=>el.clientWidth,Hh=()=>el.clientHeight;
+new ResizeObserver(()=>{const w=W(),h=Hh();if(!w||!h)return;rd.setSize(w,h);cam.aspect=w/h;cam.fov=w/h<.9?44:30;cam.updateProjectionMatrix()}).observe(el);
+new IntersectionObserver(es=>vis=es[0].isIntersecting).observe(el);
+function fr(){requestAnimationFrame(fr);if(!vis||!W())return;
+if(G)for(const q in G)S[q]+=(G[q]-S[q])*.09;else if(idle&&!rm)S.t=.75+Math.sin(performance.now()*.0003)*.4;
+const sp=Math.sin(S.p);cam.position.set(S.x+S.r*sp*Math.sin(S.t),S.y+S.r*Math.cos(S.p),S.z+S.r*sp*Math.cos(S.t));cam.lookAt(S.x,S.y,S.z);
+led.material.color.setHex(Math.sin(performance.now()*.004)>0?0xFF5A8C:0x7a2f46);rd.render(sc,cam);
+HS.forEach(h=>{const d=cam.position.clone().sub(h.p).normalize(),o=d.x*h.n[0]+d.y*h.n[1]+d.z*h.n[2],q=h.p.clone().project(cam);h.e.style.transform=`translate(${(q.x+1)/2*W()}px,${(1-q.y)/2*Hh()}px) translateY(-50%)`;h.e.style.opacity=o>.3&&S.r>2?1:0})}
+fr()})();
+/* ---------- steps / prices / demo ---------- */
+const P={bw:3,cl:10,sc:5,bd:50};
+$('#pc').innerHTML=[['Ч/Б печать',P.bw,'за страницу'],['Цветная печать',P.cl,'за страницу'],['Сканирование',P.sc,'за страницу'],['Переплёт',P.bd,'за документ']].map(p=>`<div><b>${p[1]}<small>сом</small></b><span>${p[0]}, ${p[2]}</span></div>`).join('');
+let col='bw',busy=0,tm,iv;const T_=(a,b)=>{$('#t1').textContent=a;$('#t2').textContent=b};
+function dm(){const pg=Math.max(1,+$('#pg').value||1),cp=Math.max(1,+$('#cp').value||1),d=$('#dp').checked,tot=pg*cp*P[col];$('#tt').innerHTML=`${pg} стр. × ${cp} × ${P[col]} сом = <b>${R(tot)} сом</b><br><span class="mut" style="font-size:.84rem">Листов бумаги: ${(d?Math.ceil(pg/2):pg)*cp}${d?', двусторонняя печать':''}</span>`;if(!busy)T_('К оплате: '+R(tot)+' сом','Нажмите «Оплатить»');return tot}
+function rs(){clearTimeout(tm);clearInterval(iv);busy=0;$('#pb').style.width=0;$('#pp').style.height=0;dm()}
+$('#cl').onclick=e=>{const b=e.target.closest('button');if(!b)return;col=b.dataset.v;$$('#cl button').forEach(x=>x.classList.toggle('on',x==b));if(busy)rs();else dm()};
+['#pg','#cp','#dp'].forEach(s=>$(s).oninput=()=>{if(busy)rs();else dm()});$('#rs').onclick=rs;
+$('#pay').onclick=()=>{if(busy)return;busy=1;const nm=($('#fl').files[0]||{}).name||'document.pdf';T_('Оплата принята','Подготовка печати');
+tm=setTimeout(()=>{T_('Печать',nm.slice(0,32));let w=0;iv=setInterval(()=>{w+=4;$('#pb').style.width=w+'%';$('#pp').style.height=w*.6+'%';if(w>=100){clearInterval(iv);T_('Документ готов','Заберите распечатку в лотке');busy=2}},60)},1400)};
+/* ---------- investments ---------- */
+const G=['Оборудование','Корпус','Программное обеспечение','Расходники','Установка','Резерв'];
+const I=[['Принтер (лазерный МФУ)',1,45000,0],['Мини-ПК',1,12000,0],['Сенсорный экран',1,12000,0],['QR-сканер',1,3000,0],['Корпус автомата',1,18000,1],['Лоток выдачи документов',1,3000,1],['Программное обеспечение и прототип',1,10000,2],['Платёжная интеграция',1,5000,2],['Расходники, стартовый запас',1,8000,3],['Установка',1,4000,4],['Резерв',1,10000,5]];
+$('#it').innerHTML='<tr><th>Статья</th><th>Группа</th><th class="r">Кол-во</th><th class="r">Цена, сом</th><th class="r">Сумма</th></tr>'+I.map((x,i)=>`<tr><td>${x[0]}</td><td class="mut">${G[x[3]]}</td><td class="r"><input type="number" min="0" data-i="${i}" data-f="1" value="${x[1]}"></td><td class="r"><input type="number" min="0" step="500" data-i="${i}" data-f="2" value="${x[2]}"></td><td class="r" id="rw${i}"></td></tr>`).join('')+'<tr><th colspan="4">Итого</th><th class="r" id="itt" style="color:var(--tx);font-size:1rem"></th></tr>';
+function ui(){let t=0,gs=G.map(()=>0);I.forEach((x,i)=>{const s=x[1]*x[2];t+=s;gs[x[3]]+=s;$('#rw'+i).textContent=f(s)});$('#itt').textContent=f(t);
+$('#ib').innerHTML=gs.map((g,i)=>`<i class="x${i}" style="width:${t?g/t*100:0}%"></i>`).join('');
+$('#gs').innerHTML=G.map((g,i)=>`<span><em class="x${i}"></em>${g} <b>${f(gs[i])}</b> · ${t?Math.round(gs[i]/t*100):0}%</span>`).join('');V.inv=t;const e=$('[data-k=inv]');if(e)e.value=t;up()}
+$('#it').oninput=e=>{const d=e.target.dataset;if(!d.i)return;I[d.i][d.f]=Math.max(0,+e.target.value||0);ui()};
+/* ---------- finance ---------- */
+const FL=[['d','Страниц в день',150,10,''],['n','Рабочих дней в месяц',26,1,''],['pr','Средняя цена страницы',5,.5,'сом'],['v','Переменные затраты на страницу',1.5,.1,'сом'],['fx','Постоянные расходы',5000,500,'сом/мес'],['mt','Обслуживание и ремонт',1500,250,'сом/мес'],['cm','Комиссия платежей',2,.5,'% выручки'],['tx','Налог',3,.5,'% выручки'],['inv','Стартовые инвестиции',130000,5000,'сом'],['ex','Доп. доходы',1500,250,'сом/мес']];
+const SCN={p:{d:80,pr:4.5,v:1.8,ex:500},b:{d:150,pr:5,v:1.5,ex:1500},o:{d:250,pr:5.5,v:1.3,ex:3000}};
+const V={};FL.forEach(x=>V[x[0]]=x[2]);
+$('#ins').innerHTML=FL.map(x=>`<label>${x[1]} <i>${x[4]}</i><input type="number" data-k="${x[0]}" value="${x[2]}" step="${x[3]}" min="0"></label>`).join('');
+$('#ins').oninput=e=>{V[e.target.dataset.k]=Math.max(0,+e.target.value||0);up()};$('#ss').onchange=()=>up();
+$('#scs').onclick=e=>{const b=e.target.closest('button');if(!b)return;Object.assign(V,SCN[b.dataset.sc]);$$('#ins input').forEach(i=>i.value=V[i.dataset.k]);$$('#scs button').forEach(x=>x.classList.toggle('on',x==b));up()};
+const SE=[1,1.1,1.1,1.2,.6,1,1,1,1.1,.6,.3,.3],ML=['Сен','Окт','Ноя','Дек','Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг'];
+const mo=k=>{const pg=V.d*V.n*k,rv=pg*V.pr+V.ex*k,vc=pg*V.v,fe=rv*V.cm/100,tx=rv*V.tx/100,fc=V.fx+V.mt;return{rv,vc,fe,tx,fc,ex:vc+fe+tx+fc,pf:rv-vc-fe-tx-fc}};
+let c1,c2;
+function mkc(){if(!window.Chart||c1)return;const cs=getComputedStyle(H),g=n=>cs.getPropertyValue(n).trim(),tx=g('--tx'),mu=g('--mut'),ln=g('--line'),ac=g('--acc');Chart.defaults.color=mu;Chart.defaults.borderColor=ln;Chart.defaults.font.family='"Golos Text",system-ui,sans-serif';
+const o={responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{align:'start',labels:{boxWidth:10,boxHeight:10}}},scales:{x:{grid:{display:false}},y:{grid:{color:c=>c.tick.value===0?tx:ln}}}};
+c1=new Chart($('#c1'),{data:{labels:[],datasets:[{type:'bar',label:'Выручка',backgroundColor:tx,data:[]},{type:'bar',label:'Расходы',backgroundColor:g('--l2'),data:[]},{type:'line',label:'Прибыль',borderColor:ac,backgroundColor:ac,pointRadius:3,tension:.15,data:[]}]},options:o});
+c2=new Chart($('#c2'),{type:'line',data:{labels:[],datasets:[{label:'Накопленный поток, сом',borderColor:ac,backgroundColor:ac+'22',fill:true,pointRadius:0,tension:.15,data:[]}]},options:o})}
+function up(){
+const ss=$('#ss').checked,b=mo(1);let cum=-V.inv,pb=V.inv<=0?0:null,rows=[],cf=[cum];
+for(let i=0;i<60;i++){const m=mo(ss?SE[i%12]:1),pv=cum;cum+=m.pf;if(i<24)cf.push(cum);if(i<12)rows.push({l:ML[i],...m,cum});if(pb===null&&cum>=0)pb=i+(-pv)/m.pf}
+const k=1-(V.cm+V.tx)/100,c=V.pr*k-V.v,fc=V.fx+V.mt,en=V.ex*k,be=c>0?Math.max(0,(fc-en)/c):Infinity;
+const pbT=b.pf<=0?'не достигается':pb===null?'более 60 мес.':R(Math.round(pb*10)/10)+' мес.';
+const beT=be===Infinity?'недостижима':Math.ceil(be)+' стр./мес ('+R(Math.round(be/(V.n||1)*10)/10)+' в день)';
+$('#kp').innerHTML=[['Выручка в месяц',f(b.rv)],['Переменные расходы',f(b.vc+b.fe+b.tx)],['Постоянные расходы',f(b.fc)],['Операционная прибыль',`<span class="${b.pf<0?'neg':''}">${f(b.pf)}</span>`],['Маржа',b.rv?R(b.pf/b.rv*100)+' %':'—'],['Точка безубыточности',beT],['Денежный поток за 12 мес.',`<span class="${cf[12]<0?'neg':''}">${f(cf[12])}</span>`]].map(x=>`<dt>${x[0]}</dt><dd>${x[1]}</dd>`).join('');
+$('#pbn').textContent=pbT;$('#pbs').textContent=b.pf<=0?'Операционная прибыль не положительна, накопленный поток не выходит в ноль':'По накопленному денежному потоку с учётом инвестиций';
+const xs=[['Материалы',b.vc],['Комиссия',b.fe],['Налог',b.tx],['Постоянные',V.fx],['Обслуживание и ремонт',V.mt]],xt=xs.reduce((a,x)=>a+x[1],0)||1;
+$('#xb').innerHTML=xs.map((x,i)=>`<i class="x${i}" style="width:${x[1]/xt*100}%"></i>`).join('');$('#xl').innerHTML=xs.map((x,i)=>`<span><em class="x${i}"></em>${x[0]} <b>${f(x[1])}</b> · ${Math.round(x[1]/xt*100)}%</span>`).join('');
+let T1=0,T2=0,T3=0;$('#tb').innerHTML='<tr><th>Месяц</th><th class="r">Выручка</th><th class="r">Расходы</th><th class="r">Прибыль</th><th class="r">Накопленный поток</th></tr>'+rows.map(r=>{T1+=r.rv;T2+=r.ex;T3+=r.pf;return`<tr><td>${r.l}</td><td class="r">${f(r.rv)}</td><td class="r">${f(r.ex)}</td><td class="r ${r.pf<0?'neg':''}">${f(r.pf)}</td><td class="r ${r.cum<0?'neg':''}">${f(r.cum)}</td></tr>`}).join('')+`<tr><th>Год</th><th class="r" style="color:var(--tx)">${f(T1)}</th><th class="r" style="color:var(--tx)">${f(T2)}</th><th class="r" style="color:var(--tx)">${f(T3)}</th><th></th></tr>`;
+$('#hk').innerHTML=[['Бюджет запуска',f(V.inv)],['Выручка в месяц',f(b.rv)],['Операционная прибыль в месяц',f(b.pf)],['Срок окупаемости',pbT]].map(x=>`<div><b>${x[1]}</b><span>${x[0]}</span></div>`).join('');
+$('#ue').textContent=R(c)+' сом'+(c<=0?' — цена не покрывает затраты':'');$('#c1t').textContent=f(b.pf);$('#c2t').textContent=pbT;
+const tam=(+$('#ts').value||0)*(+$('#tp').value||0)*V.pr*12,sam=tam*(+$('#tc').value||0)/100,som=(+$('#tn').value||0)*b.rv*12;
+$('#tm').innerHTML=[['TAM, сом в год',tam],['SAM, сом в год',sam],['SOM, сом в год',som]].map(x=>`<div><b>${f(x[1]).replace(' сом','')}</b><span>${x[0]}</span></div>`).join('');
+mkc();if(c1){c1.data.labels=rows.map(r=>r.l);c1.data.datasets[0].data=rows.map(r=>Math.round(r.rv));c1.data.datasets[1].data=rows.map(r=>Math.round(r.ex));c1.data.datasets[2].data=rows.map(r=>Math.round(r.pf));c1.update();c2.data.labels=cf.map((_,i)=>'М'+i);c2.data.datasets[0].data=cf.map(Math.round);c2.update()}}
+['#ts','#tp','#tc','#tn'].forEach(s=>$(s).oninput=up);
+/* ---------- gantt / risks ---------- */
+const ST=[['Исследование спроса',0,3],['Выбор локации',2,2],['Разработка прототипа',3,6],['Тестирование',9,2],['Согласование установки',6,4],['Пилотный запуск',11,16],['Оценка результатов',27,2]];
+$('#gt').innerHTML='<div></div><div class="tk"><span>неделя 0</span><span>10</span><span>20</span><span>29</span></div>'+ST.map(s=>`<div>${s[0]}</div><div class="tr"><i class="${s[0]=='Пилотный запуск'?'a':''}" style="left:${s[1]/29*100}%;width:${s[2]/29*100}%"></i></div>`).join('');
+const sq=n=>'<i class="sq on"></i>'.repeat(n)+'<i class="sq"></i>'.repeat(3-n),LV=['','низкая','средняя','высокая'];
+$('#rk').innerHTML='<tr><th>Риск</th><th>Вероятность</th><th>Влияние</th><th>Меры снижения</th></tr>'+[['Слабый спрос',2,3,'Опрос и замеры до закупки, пилот в одной точке'],['Поломки',2,2,'Резерв в бюджете, запас расходников, удалённый мониторинг'],['Сезонность',3,2,'Сезонность заложена в модель, услуги для преподавателей летом'],['Конкуренция',2,2,'Скорость, приватность, расположение в кампусе'],['Проблемы с оплатой',2,3,'Проверенный платёжный провайдер, запасной способ оплаты'],['Конфиденциальность файлов',2,3,'Шифрование, удаление после печати, отсутствие копий']].map(r=>`<tr><td><b style="font-weight:500">${r[0]}</b></td><td title="${LV[r[1]]}">${sq(r[1])}</td><td title="${LV[r[2]]}">${sq(r[2])}</td><td>${r[3]}</td></tr>`).join('');
+ui();dm();
+</script></body></html>
